@@ -10,6 +10,9 @@ import Main from './pages/Layout/Main';
 import Home from './pages/Home/Home';
 import Blog from './pages/Blog';
 import ChefCard from './pages/ChefCard';
+import ViewRecipe from './pages/ViewRecipe';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
@@ -24,11 +27,20 @@ const router = createBrowserRouter([
       {
         path: '/cardData/:id',
         element: <ChefCard></ChefCard>,
+        // element: <ViewRecipe></ViewRecipe>,
         loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
       },
       {
         path: '/blog',
         element: <Blog></Blog>
+      },
+      {
+        path: '/signUp',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
     ]
   }

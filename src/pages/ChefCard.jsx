@@ -1,26 +1,32 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
-const ChefCard = () => {
-    const cardData = useLoaderData();
-    console.log(cardData.experience
-);
+const ChefCard = ({cardData}) => {
+    // const cardData = useLoaderData();
+    // const {id, chef_img, chef_name, experience, recipe, likes, bio} = cardData;
+    console.log(cardData);
+    console.log(cardData.chef_img);
 
     return (
-        <div className=''>
-            <h3>{cardData.chef_name}</h3>
+        <div className='flex flex-cols-3'>
+            {/* <h3>{cardData.chef_name}</h3>
             <h5>{cardData.recipe}</h5>
-            <img src={cardData.chef_img} alt=""/>
-            {/* <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={} alt="" /></figure>
+            <img src={cardData.chef_img} alt=""/> */}
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <img className='rounded' src={cardData.chef_img} alt="" />
                 <div className="card-body">
                     <h2 className="card-title">{cardData.chef_name}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Experience: {cardData.experience} </p>
+                    <p>Number of Recipe: {cardData.recipe} </p>
+                    <p>Likes: {cardData.likes} </p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link to=''>
+                            <button className="btn btn-primary">Buy Now</button>
+                        </Link>
+                        
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };

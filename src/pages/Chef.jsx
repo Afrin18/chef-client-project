@@ -11,17 +11,19 @@ const chef = () => {
             <h2>Chef hunt: {chef.length}</h2>
             {
                 chef.map(cardData => 
-                // <ChefCard key={cardData.id}>
+                <ChefCard 
+                key={cardData.id} 
+                cardData={cardData}>
+                    {/* <Link to={`/cardData/${cardData.id}`}>
+                         {cardData.chef_name}
+                         </Link> */}
+                </ChefCard>) 
+                // <li key={cardData.id}>
                 //     <Link to={`/cardData/${cardData.id}`}>
-                //          {cardData.chef_name}
-                //          </Link>
-                // </ChefCard>) 
-                <li key={cardData.id}>
-                    <Link to={`/cardData/${cardData.id}`}>
-                        {/* {cardData.chef_name} */}
-                        <button className="btn btn-ghost">Button</button>
-                        </Link>
-                </li>)
+                //         {/* {cardData.chef_name} */}
+                //         <button className="btn btn-ghost">Button</button>
+                //         </Link>
+                // </li>)
             }
         </div>
     );
