@@ -4,7 +4,7 @@ import ac from '../../../public/photo-1438761681033-6461ffad8d80.jpg'
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-300 mt-4 mb-8">
+        <div className="navbar bg-base-300 lg:bg-neutral mt-4 mb-8">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -15,10 +15,10 @@ const Navbar = () => {
                         <Link to='/blog'>Blog</Link>
                     </ul>
                 </div>
-                <a className="normal-case text-xl">CHEF HUNT</a>
+                <a className="normal-case text-xl lg:text-white">CHEF HUNT</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 lg:text-white">
                     <Link className='px-4 py-2 rounded hover:bg-sky-400' to='/'>Home</Link>
                     <Link className='px-4 py-2 rounded hover:bg-sky-400' to='/blog'>Blog</Link>
                 </ul>
