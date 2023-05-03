@@ -20,8 +20,8 @@ const ChefCard = ({cardData}) => {
                     <p>Number of Recipe: {cardData.recipe} </p>
                     <p>Likes: {cardData.likes} </p>
                     <div className="card-actions justify-end">
-                        <Link to=''>
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/viewRecipe/${cardData.id}`}>
+                            <button className="btn btn-primary">View Recipe</button>
                         </Link>
                         
                     </div>

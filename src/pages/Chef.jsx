@@ -8,7 +8,6 @@ const chef = () => {
 
     return (
         <div className='mt-4'>
-            <h2>Chef hunt: {chef.length}</h2>
             {
                 chef.map(cardData => 
                 <ChefCard 

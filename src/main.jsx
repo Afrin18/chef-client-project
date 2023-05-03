@@ -26,8 +26,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/cardData/:id',
-        element: <ChefCard></ChefCard>,
-        // element: <ViewRecipe></ViewRecipe>,
+        // element: <ChefCard></ChefCard>,
+        element: <ViewRecipe></ViewRecipe>,
         loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
       },
       {
