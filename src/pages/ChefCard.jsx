@@ -8,7 +8,7 @@ const ChefCard = ({cardData}) => {
     console.log(cardData.chef_img);
 
     return (
-        <div className='flex flex-cols-3'>
+        <div className='grid grid-cols-3'>
             {/* <h3>{cardData.chef_name}</h3>
             <h5>{cardData.recipe}</h5>
             <img src={cardData.chef_img} alt=""/> */}
